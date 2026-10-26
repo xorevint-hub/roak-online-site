@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roak Online · Masaüstünde yaşayan macera</title>
+<meta name="description" content="Roak Online: masaüstünde ve mobilde kendi kendine savaşan kahramanın, derin MMO sistemleri, 4 sınıf, 21 pet ve 6 bölge.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-title">ROAK</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="logo"><span class="logo-gem"></span>ROAK<em>ONLINE</em></a>
+  <nav class="nav-links">
+    <a href="#oyun">Oyun</a>
+    <a href="#siniflar">Sınıflar</a>
+    <a href="#dunya">Dünya</a>
+    <a href="#esyalar">Eşyalar</a>
+    <a href="#guc">Güç</a>
+    <a href="#petler">Petler</a>
+    <a href="#mobil">Mobil</a>
+  </nav>
+  <a href="#kayit" class="btn btn-gold btn-sm">Ön Kayıt</a>
+  <button class="nav-burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" data-parallax="0.35" style="background-image:url(assets/art/hero.webp)"></div>
+  <div class="hero-rift" data-parallax="0.35"></div>
+  <div class="hero-rays"></div>
+  <canvas class="embers" id="embers"></canvas>
+  <div class="hero-fog"></div>
+  <div class="hero-content">
+    <div class="pixel-tag reveal">MMO · IDLE · RPG</div>
+    <h1 class="hero-title reveal" data-delay="1">
+      <span class="t-roak">ROAK</span>
+      <span class="t-online">ONLINE</span>
+    </h1>
+    <p class="hero-sub reveal" data-delay="2">Kahramanın sen çalışırken de savaşır. Ekranının kenarında, cebinde, her an.<br>Altı bölge, dört sınıf, sonu olmayan bir yarık.</p>
+    <div class="hero-cta reveal" data-delay="3">
+      <a href="#kayit" class="btn btn-gold">Maceraya Katıl</a>
+      <a href="#oyun" class="btn btn-ghost">Nasıl Oynanır</a>
+    </div>
+  </div>
+  <div class="hero-strip-wrap reveal" data-delay="4">
+    <div class="strip-label"><span class="dot-live"></span> Canlı şerit · kahraman şu an savaşıyor</div>
+    <div class="strip strip-hero" id="stripHero"></div>
+  </div>
+  <a href="#rakamlar" class="scroll-hint"><span></span></a>
+</section>
+
+<!-- ============ RAKAMLAR ============ -->
+<section class="numbers" id="rakamlar">
+  <div class="num"><b data-count="4">0</b><span>Sınıf, 3 evrim</span></div>
+  <div class="num"><b data-count="21">0</b><span>Pet</span></div>
+  <div class="num"><b data-count="6">0</b><span>Bölge, 12 ortam</span></div>
+  <div class="num"><b data-count="7">0</b><span>Nadirlik rengi</span></div>
+  <div class="num"><b data-count="150">0</b><span>Seviye + ustalık</span></div>
+</section>
+
+<!-- ============ OYUN ============ -->
+<section class="section" id="oyun">
+  <div class="sec-head reveal">
+    <div class="pixel-tag">OYUN</div>
+    <h2>Masaüstünde yaşayan bir <span class="gold">dünya</span></h2>
+    <p>Roak Online görev çubuğunun hemen üstünde ince bir şerit olarak durur. Sen işine bakarken kahramanın ve petin dalga dalga yaratıkları temizler, sandık toplar, güçlenir. Sen dönünce asıl oyun başlar.</p>
+  </div>
+
+  <div class="monitor reveal">
+    <div class="monitor-screen">
+      <div class="mock-window">
+        <div class="mock-bar"><i></i><i></i><i></i><span>rapor_final_v3.docx</span></div>
+        <div class="mock-lines"><p></p><p></p><p></p><p class="short"></p><p></p><p class="short"></p></div>
+      </div>
+      <div class="strip strip-mini" id="stripMini"></div>
+      <div class="mock-taskbar"><span class="tb-start"></span><span></span><span></span><span class="tb-on"></span><span></span><em>05:00</em></div>
+    </div>
+    <div class="monitor-stand"></div>
+  </div>
+
+  <div class="loop-grid">
+    <div class="loop-card reveal" data-delay="1">
+      <div class="loop-num">01</div>
+      <h3>Şerit savaşır</h3>
+      <p>Her bölüm 22-26 dalga. Son dalgada mini boss, her onuncu bölümde bölge bossu seni bekler.</p>
+    </div>
+    <div class="loop-card reveal" data-delay="2">
+      <div class="loop-num">02</div>
+      <h3>Sandıklar birikir</h3>
+      <p>Yaratıklar eşya düşürmez, sandık düşürür. Griden sarıya yedi renk; her dönem yeni bir renk görünmeye başlar.</p>
+    </div>
+    <div class="loop-card reveal" data-delay="3">
+      <div class="loop-num">03</div>
+      <h3>Sen güçlendirirsin</h3>
+      <p>Artı bas, efsunla, taş tak, rün ve kitapla yeteneklerini dönüştür. Kapıyı geçen, karışımı doğru kurandır.</p>
+    </div>
+    <div class="loop-card reveal" data-delay="4">
+      <div class="loop-num">04</div>
+      <h3>Kapılar açılır</h3>
+      <p>Her bossun bir anahtarı, her haritanın bir eşiği var. Takvim yok; yeterince güçlüysen geçersin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SINIFLAR ============ -->
+<section class="section classes" id="siniflar">
+  <div class="sec-head reveal">
+    <div class="pixel-tag">SINIFLAR</div>
+    <h2>Kahramanını <span class="gold">seç</span></h2>
+    <p>Dört sınıf, her biri iki kez evrimleşir. 50. seviyede ilk yükseliş, 100. seviyede gerçek unvan.</p>
+  </div>
+
+  <div class="class-tabs reveal" id="classTabs"></div>
+
+  <div class="class-stage reveal" id="classStage">
+    <div class="class-backdrops" id="classBackdrops"></div>
+    <div class="class-visual">
+      <div class="class-aura"></div>
+      <div class="class-runes"></div>
+      <div class="class-pedestal"></div>
+      <div class="sprite class-sprite" id="classSprite"></div>
+    </div>
+    <div class="class-info">
+      <div class="class-role" id="classRole"></div>
+      <h3 class="class-name" id="className"></h3>
+      <p class="class-desc" id="classDesc"></p>
+      <div class="class-stats" id="classStats"></div>
+      <div class="class-passive"><span>Pasif</span><b id="classPassive"></b></div>
+      <div class="class-passive"><span>Ek yuva</span><b id="classSlot"></b></div>
+      <div class="evo" id="classEvo"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DUNYA ============ -->
+<section class="section world" id="dunya">
+  <div class="world-map" style="background-image:url(assets/bg/WorldMap.png)"></div>
+  <div class="sec-head reveal">
+    <div class="pixel-tag">DÜNYA</div>
+    <h2>Altı bölge, on iki <span class="gold">ortam</span></h2>
+    <p>Her bölgenin ikinci yarısı bambaşka bir yerde geçer. Bölge bossunu yenmek için o bölgenin anahtarını mini bosslardan düşürmen gerek. Kartın üstüne gel, derinlere in.</p>
+  </div>
+  <div class="regions" id="regions"></div>
+
+  <div class="routes reveal">
+    <div class="route">
+      <div class="route-dot"></div>
+      <h4>Güvenli</h4>
+      <p>Altı bölge, altmış bölüm. Her şeyin başladığı yol.</p>
+    </div>
+    <div class="route">
+      <div class="route-dot"></div>
+      <h4>Av</h4>
+      <p>Altı boss yenilince açılır. Düşmanlar altmış bölüm daha güçlü, bütün sandıklar daha sık.</p>
+    </div>
+    <div class="route">
+      <div class="route-dot"></div>
+      <h4>Kaynak</h4>
+      <p>Yılın sonu. Az altın, bolca taş, öz, rün tozu. Sadece en hazırlıklılar için.</p>
+    </div>
+    <div class="route route-rift">
+      <div class="route-dot"></div>
+      <h4>Sonsuz Yarık</h4>
+      <p>Sonu yok. Ne kadar derine inebilirsin?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESYALAR ============ -->
+<section class="section items" id="esyalar">
+  <div class="sec-head reveal">
+    <div class="pixel-tag">EŞYALAR</div>
+    <h2>Yedi renk, sonsuz <span class="gold">heyecan</span></h2>
+    <p>Gri bir kılıçla başlarsın. Bir gün bir sandık sarı parlar ve o an unutulmaz.</p>
+  </div>
+
+  <div class="rarity-ladder reveal" id="rarityLadder"></div>
+
+  <div class="play-grid">
+    <div class="play-card reveal" data-delay="1">
+      <div class="play-head"><h3>Sandık aç</h3><span class="pixel-tag sm">DENE</span></div>
+      <div class="chest-area">
+        <div class="chest" id="chest">
+          <div class="chest-glow"></div>
+          <div class="chest-lid"></div>
+          <div class="chest-body"><i></i></div>
+        </div>
+        <div class="loot" id="loot">
+          <div class="loot-gem"></div>
+          <div class="loot-name">Sandığa dokun</div>
+          <div class="loot-meta">Bakalım şansın ne kadar?</div>
+        </div>
+      </div>
+      <button class="btn btn-gold w100" id="chestBtn">Sandığı Aç</button>
+      <div class="loot-history" id="lootHistory"></div>
+    </div>
+
+    <div class="play-card reveal" data-delay="2">
+      <div class="play-head"><h3>Artı bas</h3><span class="pixel-tag sm">DENE</span></div>
+      <div class="upg">
+        <div class="upg-item" id="upgItem">
+          <div class="upg-gem"></div>
+          <div class="upg-plus" id="upgPlus">+0</div>
+        </div>
+        <div class="upg-info">
+          <div class="upg-title">Ejder Pulu Kılıç</div>
+          <div class="upg-row"><span>Güç çarpanı</span><b id="upgMul">x1,00</b></div>
+          <div class="upg-row"><span>Başarı şansı</span><b id="upgChance">%100</b></div>
+          <div class="upg-row"><span>Şans sayacı</span><b id="upgPity">+%0</b></div>
+          <div class="upg-bar"><span id="upgBar"></span></div>
+        </div>
+      </div>
+      <div class="upg-msg" id="upgMsg">+5'e kadar güvenli. Sonrası cesaret ister.</div>
+      <div class="btn-row">
+        <button class="btn btn-gold" id="upgBtn">Artı Bas</button>
+        <button class="btn btn-ghost" id="upgReset">Sıfırla</button>
+      </div>
+      <p class="fine">Eşya asla yanmaz. Her başarısızlık bir sonraki denemeye şans biriktirir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUC ============ -->
+<section class="section power" id="guc">
+  <div class="sec-head reveal">
+    <div class="pixel-tag">GÜÇ</div>
+    <h2>Güç tek bir yerden <span class="gold">gelmez</span></h2>
+    <p>Sadece eşya toplayan duvara çarpar. Ekipman, skiller, taşlar, efsunlar, petler, kitaplar... Her kaynak hissedilir, hepsi birlikte kapıyı açar.</p>
+  </div>
+
+  <div class="power-wrap">
+    <div class="gs-bars reveal" id="gsBars"></div>
+    <div class="features" id="features"></div>
+  </div>
+</section>
+
+<!-- ============ PETLER ============ -->
+<section class="section pets" id="petler">
+  <div class="sec-head reveal">
+    <div class="pixel-tag">PETLER</div>
+    <h2>Yalnız savaşmazsın</h2>
+    <p>Üç pet yuvası, keşif seferleri, pet eşyaları. Bazı petler mağazada değil, bestiary'de bekler: bir türden yeterince avla, sana katılsın.</p>
+  </div>
+  <div class="pet-grid" id="petGrid"></div>
+</section>
+
+<!-- ============ MOBIL ============ -->
+<section class="section mobile" id="mobil">
+  <div class="mobile-wrap">
+    <div class="phone reveal">
+      <div class="phone-notch"></div>
+      <img src="assets/shots/mobil1.png" alt="Roak Online mobil kahraman yaratma ekranı">
+    </div>
+    <div class="mobile-text">
+      <div class="pixel-tag reveal">MOBİL</div>
+      <h2 class="reveal">Cebindeki <span class="gold">krallık</span></h2>
+      <p class="reveal">Dikey ekran için baştan tasarlandı. Üstte savaş, altta menü, tek elle bütün sistemler. Gece mavisi ve altın tonlarında koyu bir arayüz.</p>
+      <ul class="ticks">
+        <li class="reveal" data-delay="1">Dikey, tek elle oynanış</li>
+        <li class="reveal" data-delay="2">Masaüstündeki bütün derinlik</li>
+        <li class="reveal" data-delay="3">Kahramanını baştan sona özelleştir</li>
+        <li class="reveal" data-delay="4">Göz yormayan koyu tema</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAYIT ============ -->
+<section class="cta" id="kayit">
+  <div class="cta-bg" style="background-image:url(assets/bg/intro_bg.png)"></div>
+  <div class="cta-inner reveal">
+    <div class="pixel-tag">ÖN KAYIT</div>
+    <h2>Kahramanın seni <span class="gold">bekliyor</span></h2>
+    <p>İlk kapılar açıldığında haber verelim.</p>
+    <form class="signup" id="signup">
+      <input type="email" required placeholder="e-posta adresin">
+      <button class="btn btn-gold" type="submit">Kaydol</button>
+    </form>
+    <div class="signup-ok" id="signupOk">Kaydın alındı. Yarıkta görüşürüz!</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <a href="#top" class="logo"><span class="logo-gem"></span>ROAK<em>ONLINE</em></a>
+  <p>Unity ile geliştiriliyor · © 2026 Roak Online</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
