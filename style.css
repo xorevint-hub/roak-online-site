@@ -360,6 +360,9 @@ a { color: inherit; text-decoration: none; }
 .signup input::placeholder { color: var(--muted); }
 .signup-ok { display: none; margin-top: 30px; font: 700 22px "Cinzel"; color: var(--gold2); }
 .signup.sent { display: none; } .signup.sent + .signup-ok { display: block; animation: lootIn .6s; }
+.signup-err { display: none; margin-top: 14px; color: #ff9a8a; font: 600 16px "Alegreya Sans"; }
+.signup-err.show { display: block; }
+.signup button:disabled { opacity: .6; cursor: wait; }
 
 .footer { display: flex; justify-content: space-between; align-items: center; padding: 40px 5vw; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
 

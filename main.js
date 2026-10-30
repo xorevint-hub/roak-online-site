@@ -491,7 +491,33 @@ function ui() {
   }), { threshold: .5 });
   document.querySelectorAll("[data-count]").forEach(el => cio.observe(el));
 
-  $("#signup").onsubmit = e => { e.preventDefault(); e.target.classList.add("sent"); };
+  // Ön kayıt: <meta name="roak:kayit"> doluysa e-posta oraya gönderilir, boşsa yalnız teşekkür gösterilir
+  const kayit = (document.querySelector('meta[name="roak:kayit"]')?.content || "").trim();
+  $("#signup").onsubmit = async e => {
+    e.preventDefault();
+    const f = e.target, btn = f.querySelector("button");
+    $("#signupErr").classList.remove("show");
+    if (kayit) {
+      btn.disabled = true;
+      try {
+        const r = await fetch(kayit, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(f) });
+        if (!r.ok) throw new Error(r.status);
+      } catch (err) {
+        btn.disabled = false;
+        $("#signupErr").classList.add("show");
+        return;
+      }
+    }
+    f.classList.add("sent");
+  };
+
+  // Ziyaretçi sayacı (GoatCounter, çerezsiz): <meta name="roak:sayac"> doluysa yüklenir
+  const sayac = (document.querySelector('meta[name="roak:sayac"]')?.content || "").trim();
+  if (sayac) {
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://gc.zgo.at/count.js"; s.dataset.goatcounter = sayac;
+    document.head.append(s);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -7,6 +7,22 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="Roak Online: masaüstünde ve mobilde kendi kendine savaşan kahramanın, derin MMO sistemleri, 4 sınıf, 21 pet ve 6 bölge.">
+<link rel="canonical" href="https://spiellab.com/">
+<!-- Paylaşım önizlemesi (WhatsApp, Discord, X...): görsel assets/og.jpg, 1200x630 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roak Online">
+<meta property="og:title" content="Roak Online · Masaüstünde yaşayan macera">
+<meta property="og:description" content="Kahramanın sen çalışırken de savaşır. Altı bölge, dört sınıf, 21 pet ve sonu olmayan bir yarık.">
+<meta property="og:url" content="https://spiellab.com/">
+<meta property="og:image" content="https://spiellab.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Ayarlar: roak:kayit = ön kayıt formunun gönderileceği adres (Formspree/FormSubmit gibi; boşsa kayıt hiçbir yere gitmez),
+     roak:sayac = GoatCounter sayaç adresi, ör. https://roak.goatcounter.com/count (boşsa sayaç yüklenmez) -->
+<meta name="roak:kayit" content="">
+<meta name="roak:sayac" content="">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -281,10 +297,11 @@
     <h2>Kahramanın seni <span class="gold">bekliyor</span></h2>
     <p>İlk kapılar açıldığında haber verelim.</p>
     <form class="signup" id="signup">
-      <input type="email" required placeholder="e-posta adresin">
+      <input type="email" name="email" required autocomplete="email" aria-label="E-posta adresin" placeholder="e-posta adresin">
       <button class="btn btn-gold" type="submit">Kaydol</button>
     </form>
     <div class="signup-ok" id="signupOk">Kaydın alındı. Yarıkta görüşürüz!</div>
+    <div class="signup-err" id="signupErr" role="alert">Kayıt gönderilemedi, biraz sonra tekrar dener misin?</div>
   </div>
 </section>
 
